@@ -11,7 +11,7 @@ public class EratosthenesSieve {
             sup = filter(sup, sb, (long) Math.sqrt(N));
         } while (sup != null);
 
-        //最後の","を消す
+        //delete the last ","
         sb.deleteCharAt(sb.length() - 1);
         System.out.println(sb);
     }
