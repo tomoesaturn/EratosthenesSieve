@@ -19,7 +19,7 @@ public class EratosthenesSieve {
     static Supplier<LongStream> filter(Supplier<LongStream> stream, StringBuilder sb, long sqrt) {
         long l = stream.get().findFirst().getAsLong();
         if (l > sqrt) {
-            stream.get().parallel().forEach(i -> sb.append(i + ","));
+            stream.get().forEach(i -> sb.append(i + ","));
             return null;
         }
         sb.append(l + ",");
